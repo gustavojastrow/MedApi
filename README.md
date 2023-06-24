@@ -1,16 +1,27 @@
 <div align="center">
   <h1>Projeto MedApi</h1>
-  <p> Desenvolvido com por Gustavo Jastrow.</p>
+  <p> Desenvolvido por Gustavo Jastrow utilizando os recursos do curso de Spring Boot3 ALURA.</p>
 </div>
 
-## Dados para a criação da API:
-https://trello.com/b/O0lGCsKb/api-voll-med
+## 💻 Sobre o projeto
+
+Voll.med é uma clínica médica fictícia que precisa de um aplicativo para gestão de consultas. O aplicativo deve possuir funcionalidades que permitam o cadastro de médicos e de pacientes, e também o agendamento e cancelamento de consultas.
+
+## ⚙️ Funcionalidades
+
+- [x] CRUD de médicos;
+- [x] CRUD de pacientes;
+- [ ] Agendamento de consultas(em breve);
+- [ ] Cancelamento de consultas(em breve);
+
+---
+
+## 🎨 Layout
+
+O layout da aplicação mobile está disponível neste link: <a href="https://www.figma.com/file/N4CgpJqsg7gjbKuDmra3EV/Voll.med">Figma</a>
 
 
-## ⚙ Sobre a API:
-- Crie do zero uma API Rest em Java com Spring Boot
-- Desenvolva CRUDs utilizando o banco de dados MySQL
-- Realize validações utilizando o Bean Validation
-- Realize paginação dos dados da API
+## 📄 Documentação
 
-- EM DESENVOLVIMENTO
+A documentação das funcionalidades da aplicação pode ser acessada neste link: <a href="https://trello.com/b/O0lGCsKb/api-voll-med">Trello</a>
+
