@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.util.UriComponentsBuilder;
 
 import com.ApiMed.Medic.Medic;
 import com.ApiMed.Medic.MedicDetailData;
@@ -35,8 +36,12 @@ public class MedicController{
 
     @Transactional
     @PostMapping
-    public ResponseEntity register(@RequestBody @Valid MedicRegisterData dados){
-        repository.save(new Medic(dados));
+    public ResponseEntity register(@RequestBody @Valid MedicRegisterData dados,UriComponentsBuilder uriBuilder){
+        var medic = new Medic(dados);
+        repository.save(medic);
+        
+        var uri = uriBuilder.path("/medicos/{id}").buildAndExpand(medic.getId()).toUri();
+        return ResponseEntity.created(uri).body(new MedicDetailData(medic));
     }
 
     @GetMapping
@@ -49,7 +54,7 @@ public class MedicController{
     @Transactional
     public ResponseEntity atualizar(@RequestBody MedicUpdateData dados){
         var medic = repository.getReferenceById(dados.id());
-        medico.updateInfo(dados);
+        medic.updateInfo(dados);
         
         return ResponseEntity.ok(new MedicDetailData(medic));
     }
@@ -57,8 +62,8 @@ public class MedicController{
     @DeleteMapping("/{id}")
     @Transactional
     public ResponseEntity deletar(@PathVariable Long id){
-        var medico = repository.getReferenceById(id);
-        medico.exclude();
+        var medic = repository.getReferenceById(id);
+        medic.exclude();
 
         return ResponseEntity.noContent().build();
     }
