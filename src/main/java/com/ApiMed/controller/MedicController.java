@@ -66,4 +66,11 @@ public class MedicController{
 
         return ResponseEntity.noContent().build();
     }
+
+    @GetMapping("/{id}")
+    public ResponseEntity listarPorId(@PathVariable Long id){
+        var medic = repository.getReferenceById(id);
+
+        return ResponseEntity.ok(new MedicDetailData(medic));
+    }
 }
