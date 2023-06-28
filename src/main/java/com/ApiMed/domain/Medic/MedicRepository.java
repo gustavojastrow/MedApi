@@ -1,4 +1,4 @@
-package com.ApiMed.Medic;
+package com.ApiMed.domain.Medic;
 
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;

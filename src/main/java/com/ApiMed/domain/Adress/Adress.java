@@ -1,6 +1,6 @@
-package com.ApiMed.Adress;
+package com.ApiMed.domain.Adress;
 
-import com.ApiMed.Medic.MedicUpdateData;
+import com.ApiMed.domain.Medic.MedicUpdateData;
 
 import jakarta.persistence.Embeddable;
 import lombok.AllArgsConstructor;

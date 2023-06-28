@@ -1,6 +1,6 @@
-package com.ApiMed.Patient;
+package com.ApiMed.domain.Patient;
 
-import com.ApiMed.Adress.DataAdress;
+import com.ApiMed.domain.Adress.DataAdress;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.Email;

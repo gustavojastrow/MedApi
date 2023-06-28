@@ -16,12 +16,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.util.UriComponentsBuilder;
 
-import com.ApiMed.Medic.Medic;
-import com.ApiMed.Medic.MedicDetailData;
-import com.ApiMed.Medic.MedicListData;
-import com.ApiMed.Medic.MedicRegisterData;
-import com.ApiMed.Medic.MedicRepository;
-import com.ApiMed.Medic.MedicUpdateData;
+import com.ApiMed.domain.Medic.Medic;
+import com.ApiMed.domain.Medic.MedicDetailData;
+import com.ApiMed.domain.Medic.MedicListData;
+import com.ApiMed.domain.Medic.MedicRegisterData;
+import com.ApiMed.domain.Medic.MedicRepository;
+import com.ApiMed.domain.Medic.MedicUpdateData;
 
 import jakarta.transaction.Transactional;
 import jakarta.validation.Valid;

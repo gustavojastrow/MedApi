@@ -1,6 +1,6 @@
-package com.ApiMed.Patient;
+package com.ApiMed.domain.Patient;
 
-import com.ApiMed.Adress.Adress;
+import com.ApiMed.domain.Adress.Adress;
 
 public record PatientDetailData(Long id,String nome,String email,String telefone, Adress endereco) {  
 

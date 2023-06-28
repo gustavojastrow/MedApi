@@ -1,7 +1,7 @@
-package com.ApiMed.Patient;
-import jakarta.validation.constraints.NotNull;
+package com.ApiMed.domain.Patient;
+import com.ApiMed.domain.Adress.DataAdress;
 
-import com.ApiMed.Adress.DataAdress;
+import jakarta.validation.constraints.NotNull;
 
 
 public record PatientUpdateData(

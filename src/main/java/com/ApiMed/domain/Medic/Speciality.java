@@ -1,4 +1,4 @@
-package com.ApiMed.Medic;
+package com.ApiMed.domain.Medic;
 
 public enum Speciality {
     ORTOPEDIA,

@@ -15,12 +15,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.util.UriComponentsBuilder;
 
-import com.ApiMed.Patient.Patient;
-import com.ApiMed.Patient.PatientDetailData;
-import com.ApiMed.Patient.PatientListData;
-import com.ApiMed.Patient.PatientRegisterData;
-import com.ApiMed.Patient.PatientRepository;
-import com.ApiMed.Patient.PatientUpdateData;
+import com.ApiMed.domain.Patient.Patient;
+import com.ApiMed.domain.Patient.PatientDetailData;
+import com.ApiMed.domain.Patient.PatientListData;
+import com.ApiMed.domain.Patient.PatientRegisterData;
+import com.ApiMed.domain.Patient.PatientRepository;
+import com.ApiMed.domain.Patient.PatientUpdateData;
 
 import jakarta.transaction.Transactional;
 import jakarta.validation.Valid;
@@ -64,5 +64,11 @@ public class PatientController{
         patient.exclude();
 
         return ResponseEntity.noContent().build();
+    }
+    @GetMapping("/{id}")
+    public ResponseEntity listarPorId(@PathVariable Long id){
+        var patient = repository.getReferenceById(id);
+
+        return ResponseEntity.ok(new PatientDetailData(patient));
     }
 }

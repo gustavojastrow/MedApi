@@ -1,44 +1,53 @@
-package com.ApiMed.Patient;
+package com.ApiMed.domain.Medic;
 
-import com.ApiMed.Adress.Adress;
 
 import jakarta.persistence.Id;
+
+import com.ApiMed.domain.Adress.Adress;
+
 import jakarta.persistence.Embedded;
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-@Table(name="patients")
-@Entity(name="Patient")
+@Table(name="medics")
+@Entity(name="Medic")
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode(of = "id")
 
-public class Patient {
+public class Medic {
     @Id @GeneratedValue
     private Long id;
     private String nome;
     private String email;
     private String telefone;
+    private String crm;
 
+    @Enumerated(EnumType.STRING)
+    private Speciality especialidade;
     @Embedded
     private Adress endereco;
 
     private Boolean ativo;
 
-    public Patient(PatientRegisterData dados){
+    public Medic(MedicRegisterData dados){
         this.nome = dados.nome();
         this.email = dados.email();
+        this.crm = dados.crm();
         this.telefone = dados.telefone();
+        this.especialidade = dados.especialidade();
         this.endereco = new Adress(dados.endereco());
         this.ativo = true;
     }
 
-    public void updateInfo(PatientUpdateData dados) {
+    public void updateInfo(MedicUpdateData dados) {
         if(dados.nome() != null){
             this.nome = dados.nome();
         }

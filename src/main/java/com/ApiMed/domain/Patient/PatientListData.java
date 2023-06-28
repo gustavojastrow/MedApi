@@ -1,4 +1,4 @@
-package com.ApiMed.Patient;
+package com.ApiMed.domain.Patient;
 
 public record PatientListData(Long id,String nome, String email) {
 

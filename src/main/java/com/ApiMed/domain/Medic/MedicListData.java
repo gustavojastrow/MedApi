@@ -1,4 +1,4 @@
-package com.ApiMed.Medic;
+package com.ApiMed.domain.Medic;
 
 public record MedicListData(Long id,String nome, String email, String crm, Speciality especialidade) {
 
