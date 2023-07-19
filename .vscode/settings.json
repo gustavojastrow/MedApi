@@ -14,5 +14,6 @@
             "username": "root",
             "askForPassword": true
         }
-    ]
+    ],
+    "java.configuration.updateBuildConfiguration": "interactive"
 }

@@ -1,9 +1,8 @@
 package com.ApiMed.domain.Patient;
 
+import com.ApiMed.Adress.Adress;
+
 import jakarta.persistence.Id;
-
-import com.ApiMed.domain.Adress.Adress;
-
 import jakarta.persistence.Embedded;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

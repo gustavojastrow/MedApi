@@ -1,16 +1,12 @@
-package com.ApiMed.domain.Adress;
-
-import com.ApiMed.domain.Medic.MedicUpdateData;
+package com.ApiMed.Adress;
 
 import jakarta.persistence.Embeddable;
 import lombok.AllArgsConstructor;
-import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
-@EqualsAndHashCode(of = "id")
 @Embeddable
 public class Adress {
     private String logradouro;

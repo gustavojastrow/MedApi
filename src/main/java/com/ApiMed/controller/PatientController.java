@@ -65,10 +65,4 @@ public class PatientController{
 
         return ResponseEntity.noContent().build();
     }
-    @GetMapping("/{id}")
-    public ResponseEntity listarPorId(@PathVariable Long id){
-        var patient = repository.getReferenceById(id);
-
-        return ResponseEntity.ok(new PatientDetailData(patient));
-    }
 }

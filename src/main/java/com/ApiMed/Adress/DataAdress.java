@@ -1,4 +1,4 @@
-package com.ApiMed.domain.Adress;
+package com.ApiMed.Adress;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Pattern;
