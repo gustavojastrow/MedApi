@@ -1,6 +1,6 @@
 <div align="center">
   <h1>Projeto MedApi</h1>
-  <p> Desenvolvido por Gustavo Jastrow utilizando os recursos do curso de Spring Boot3 ALURA.</p>
+  <p> Desenvolvido por Gustavo Jastrow.</p>
 </div>
 
 ## 💻 Sobre o projeto
